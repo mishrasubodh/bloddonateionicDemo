@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="title">home</ion-title>
+  </ion-toolbar>
+  <ion-toolbar aria-colcount="danger" class="toolbar">
+    <ion-title class="note">
+      <h4>please select blood group </h4>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="header">
+    <div *ngIf="isshowing">
+      <ion-grid *ngFor="let d of activUserData">
+        <ion-row>
+          <ion-col size="6">
+            <ion-list>
+              <ion-item class="usercolor">
+                <ion-label class="blodfor">User Name</ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+          <ion-col size="6">
+            <ion-list>
+              <ion-item>
+                <ion-label class="blodfor">{{d.userName}}</ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6">
+            <ion-list>
+              <ion-item class="usercolor">
+                <ion-label class="blodfor">bloodGroup</ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+          <ion-col size="6">
+            <ion-list>
+              <ion-item>
+                <ion-label class="blodfor">{{d.bloodGroupName}}</ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6">
+            <ion-list>
+              <ion-item>
+                <ion-label class="blodfor">
+                  <ion-button color="warning" (click)="goEditPage(d)">edit</ion-button>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+          <ion-col size="6">
+            <ion-list>
+              <ion-item>
+                <ion-label class="blodfor">
+                  <ion-button color="danger" (click)="deleteConfirm(d)">delete</ion-button>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </ion-card>
+  <ion-card [ngClass]=" isshowing ? 'loginshow' : 'loginshoww'">
+    <ion-grid class="gridclass">
+      <ion-row>
+        <ion-col size="12" class="countrystate">
+          <ion-item *ngFor="let blod of bdata;let i = index">
+            <ion-label class="blodfor" (click)="getcounty(blod)">{{blod}}
+              <input class="blodfor1" name="blod" type="radio" />
+            </ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-card class="footer">
+    <ion-button class="nextbutton" [disabled]="!showcountry" color="success" (click)="gocountrypage()">next</ion-button>
+  </ion-card>
+</ion-footer>

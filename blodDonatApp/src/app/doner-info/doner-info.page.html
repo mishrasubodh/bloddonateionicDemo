@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="title">donerInfo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+  <ion-grid>
+    <div *ngFor="let d of data;  let i = index">
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+        <a data-toggle="collapse" data-parent="#accordion" href="#demo{{i}}">
+          <ion-row (click)="showinfo(d)">
+            <ion-col *ngIf="data" size="3">
+              <ion-list>
+                <ion-item class="usrname">
+                  <ion-label>{{d.bloodGroupName}}</ion-label>
+                </ion-item>
+              </ion-list>
+            </ion-col>
+            <ion-col *ngIf="data" size="9">
+              <ion-list>
+                <ion-item class="username">
+                  <ion-label class="blodfor">{{d.userName}} </ion-label>
+                  <span class="blodfor">{{d.phoneNumber}}</span>
+                </ion-item>
+              </ion-list>
+            </ion-col>
+          </ion-row>
+        </a>
+        <ion-grid id="demo{{i}}" class="panel-collapse collapse  sharegrid">
+          <ion-row>
+            <ion-col size="4" (click)="calldoner(d)">
+              <img class="imgclass" src="../../assets/img/phon.png" alt="Smiley face" height="42" width="42">
+              <ion-label class="call">Call</ion-label>
+            </ion-col>
+            <ion-col size="4" (click)="messagedoner(d)">
+              <img class="imgclass" src="../../assets/img/messae.jpg" alt="Smiley face" height="42" width="42">
+              <ion-label class="message">Message</ion-label>
+            </ion-col>
+            <ion-col size="4" (click)="sharedoner(d)">
+              <img class="imgclass" src="../../assets/img/share1.jpg" alt="Smiley face" height="42" width="42">
+              <ion-label class="Share">Share</ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        </div>
+      </div>
+    </div>
+  </ion-grid>
+</ion-content>
+
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+   <a data-toggle="collapse" data-parent="#accordion"href="#collapse1">Collapsible Group 1</a>
+    <div id="collapse1" class="panel-collapse collapse ">
+      <div >Lorem ipsum dolor sit amet, consectetur adipisicing elit,</div>
+    </div>
+  </div>
+      <div class="panel panel-default">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Collapsible Group 2</a>
+          <div id="collapse2" class="panel-collapse collapse">
+           <div >Lorem ipsum dolor sit amet, consectetur adipisicing elit,</div>
+         </div>
+      </div>
+ </div>
+
+

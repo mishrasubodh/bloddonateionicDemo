@@ -1,0 +1,34 @@
+ion-img{
+    height: 48px;
+}
+
+.blood{
+    background-color: #dc6969;
+}
+.username{
+    background-color: #dc6a6a;
+}
+ion-item.usrname{
+    --background: url('../../assets/img/photoblod.jpg') 0 0/100% 100% no-repeat;
+}
+
+
+.imgclass{
+    max-width: 100%;
+    border: 0;
+    width: 74%;
+}
+
+.call{
+    padding-left: 20px;
+}
+.message{
+    padding-left: 6px;
+}
+.Share{
+    padding-left: 16px;
+}
+
+.sharegrid{
+    border-style: double;
+}

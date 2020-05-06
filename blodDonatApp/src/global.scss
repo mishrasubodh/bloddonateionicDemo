@@ -1,0 +1,143 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+ion-content{
+
+    --ion-background-color:#77987a3b;
+}
+
+
+ion-toolbar {
+    --color: #000000;
+    --background: #7187b3;
+}
+
+.alert-wrapper.sc-ion-alert-md {
+    border-radius: 4px;
+    background-color: #652e2e;
+}
+.alert-button-group.sc-ion-alert-md{
+    display: -webkit-inline-box;
+    padding-left: unset;
+    padding-right: unset;
+    -webkit-padding-start: 8px;
+    padding-inline-start: 8px;
+    -webkit-padding-end: 8px;
+    padding-inline-end: 8px;
+}
+
+.title{
+    text-align: center;
+    padding-right: 15%;
+    font-weight: 700;
+    color: #cb3636;
+    font-size: 26px;
+}
+
+.button-inline{
+    display: grid;
+}
+
+
+.blodfor{
+    font-size: large !important;
+}
+
+.blodfor1{
+    font-size: x-large;
+    float: right;
+    width: 20px;
+    height: 20px;
+}
+
+.countrystate{
+    border-style: solid;
+}
+
+.danger {
+    background: lightcoral;
+  }
+
+.usercolor{
+  color: #901e1e;
+}
+.note{
+    h4 {
+    display: block;
+    font-size: 23px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    margin-left: 17px;
+    margin-right: 0;
+    font-weight: 400;
+    text-align: center;
+    }
+}
+
+.nextbutton{
+    float: right;
+}
+
+.header{
+    position: fixed;
+    z-index: 9999999999;
+    background-color: #eddcdc;
+    /* opacity: 9999999; */
+    width: -webkit-fill-available;
+}
+
+.footer{
+    z-index: 9999999999;
+    background-color: #b6c7b6;
+    width: -webkit-fill-available;
+}
+ion-footer{
+    background-color: #b6c7b6;
+}
+
+.toolbar{
+    border-radius: 17px;
+    margin: 1px;
+    --background: #b3b3b3;
+}
+
+.my-custom-modal-css .modal-wrapper {
+    height: 74%;
+    top: 11%;
+    position: absolute; 
+    display: block;  
+ }
+
+ .y-custom-modal-css .modal-wrapper {
+    height: 45%;
+    top: 17%;
+    position: absolute; 
+    display: block;  
+ }
+
+

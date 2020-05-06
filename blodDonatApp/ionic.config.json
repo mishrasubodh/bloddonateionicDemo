@@ -1,0 +1,7 @@
+{
+  "name": "bloodgroup",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

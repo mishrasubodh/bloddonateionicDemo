@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title  class="title">doner login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding class="label-cl green-bg acct-sct item-row" style="position:fixed">
+  <ion-card>
+  
+  <form #f="ngForm" (ngSubmit)="signUp(f)">
+    
+
+    <ion-item>
+      <h4>please enter</h4>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" name="email" ngModel required></ion-input>
+    </ion-item>
+    <!-- <p style="color:red;text-align: left" *ngIf="emailError">Invalid E-mail</p> -->
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="Password" name="password" ngModel required></ion-input>
+    </ion-item>
+    <!-- <p style="color:red;text-align: left" *ngIf="passwordLengthError">Invalid Password</p> -->
+
+    <div class="button-inline">
+      <ion-button color="success"[disabled]="!f.valid"(click)="signUp(f)">login</ion-button>
+    </div>
+  </form>
+</ion-card>
+</ion-content>

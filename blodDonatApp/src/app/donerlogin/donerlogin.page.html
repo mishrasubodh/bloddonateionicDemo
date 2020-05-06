@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title  class="title">doner Registration</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding class="label-cl green-bg acct-sct item-row" style="position:fixed">
+  <ion-card>
+  <h2 class="center-col">Create An Account</h2>
+  <form #f="ngForm" (ngSubmit)="signUp(f)">
+    <ion-item>
+      <ion-label position="floating">Username</ion-label>
+      <ion-input type="text" name="name" ngModel required></ion-input>
+    </ion-item>
+    <!-- <p style="color:red;text-align: left" *ngIf="usernameError">Invalid Username</p> -->
+
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" name="email" ngModel required></ion-input>
+    </ion-item>
+    <!-- <p style="color:red;text-align: left" *ngIf="emailError">Invalid E-mail</p> -->
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="Password" name="password" ngModel required></ion-input>
+    </ion-item>
+    <!-- <p style="color:red;text-align: left" *ngIf="passwordLengthError">Invalid Password</p> -->
+    <ion-item>
+      <ion-label position="floating">Confirm Password</ion-label>
+      <ion-input type="Password" name="confirm_password" ngModel required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">phoneNumber</ion-label>
+      <ion-input type="number" name="phoneNumber" ngModel required></ion-input>
+    </ion-item>
+    <!-- <p style="color:red;text-align: left" *ngIf="phonenumberError">Invalid phoneNumber</p> -->
+
+    <ion-item>
+      <ion-label position="floating">bloodGroupName</ion-label>
+      <ion-input type="text" name="bloodGroupName" ngModel required></ion-input>
+    </ion-item>
+    <!-- <p style="color:red;text-align: left" *ngIf="emailError">Invalid bloodGroupName</p>  -->
+ 
+    <ion-item>
+      <ion-label position="floating">districtName</ion-label>
+      <ion-input type="text" name="districtName" ngModel required></ion-input>
+    </ion-item>
+    <!-- <p style="color:red;text-align: left" *ngIf="districtNameError">Invalid DistrictName</p> -->
+
+
+    <ion-item>
+      <ion-label position="floating">State Name</ion-label>
+      <ion-input type="text" name="StateName" ngModel required></ion-input>
+    </ion-item>
+    <!-- <p style="color:red;text-align: left" *ngIf="StateNameError">Invalid StateName</p> -->
+
+
+    <ion-item>
+      <ion-label position="floating">country Name</ion-label>
+      <ion-input type="text" name="countryname" ngModel required></ion-input>
+    </ion-item>
+    <!-- <p style="color:red;text-align: left" *ngIf="countrynameError">Invalid countrytName</p> -->
+
+    
+   
+    <div class="button-inline">
+      <ion-button color="success"[disabled]="!f.valid"(click)="signUp(f)">Register</ion-button>
+    </div>
+  </form>
+</ion-card>
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="title">Send message</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3" class="to">
+        to :
+      </ion-col>
+      <ion-col  size="9" style="color: brown;">
+       {{number}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>
+<ion-card>
+  <ion-grid>
+    <ion-row>
+     
+      <ion-col  size="12">
+        <textarea #myInput id="myInput" rows="1" maxLength="500" placeholder="message write here" [(ngModel)]="myStuff"></textarea>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>
+</ion-content>
+<ion-footer>
+  <ion-card class="footer" >
+    <ion-button color="secondary" (click)="dismiss()">back</ion-button>
+    <ion-button color="success" class="nextbutton"[disabled]="!myStuff" (click)=" sendmsg(myStuff)">Send</ion-button>
+  </ion-card>
+</ion-footer>

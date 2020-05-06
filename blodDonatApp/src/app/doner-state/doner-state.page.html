@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="title">doner State</ion-title>
+  </ion-toolbar>
+  <ion-toolbar aria-colcount="danger" class="toolbar">
+    <ion-title class="note">
+      <h4>please select State </h4>
+  </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="countrystate">
+          <ion-list>
+            <ion-item *ngFor="let state of stateData">
+              <ion-label class="blodfor" (click)="getdistrictdata(state)">{{state}}
+                <input class="blodfor1" name="state" type="radio" />
+              </ion-label>
+            </ion-item>
+          </ion-list>
+         
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-card class="footer" >
+    <ion-button color="secondary" (click)="goback()">back</ion-button>
+    <ion-button color="success" class="nextbutton"[disabled]="!dist" (click)="gotDistrict()">next</ion-button>
+  </ion-card>
+</ion-footer>
