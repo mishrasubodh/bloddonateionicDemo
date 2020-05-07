@@ -127,14 +127,14 @@ ion-footer{
 }
 
 .my-custom-modal-css .modal-wrapper {
-    height: 74%;
+    height: 74% !important;
     top: 11%;
     position: absolute; 
     display: block;  
  }
 
  .y-custom-modal-css .modal-wrapper {
-    height: 45%;
+    height: 45% !important;
     top: 17%;
     position: absolute; 
     display: block;  

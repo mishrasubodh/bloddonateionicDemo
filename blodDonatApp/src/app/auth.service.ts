@@ -15,7 +15,7 @@ export class AuthService {
   private showuser = new BehaviorSubject<boolean>(false);
   showUserData = this.showuser.asObservable();
 
-  url = "http://192.168.1.103:5000";
+  url = "http://192.168.0.100:5000";
 
   constructor(
     private Http: HttpClient,

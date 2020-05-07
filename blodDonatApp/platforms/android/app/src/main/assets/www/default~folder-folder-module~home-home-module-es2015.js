@@ -679,7 +679,7 @@ let AuthService = class AuthService {
         this.data = this.dataSource.asObservable();
         this.showuser = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](false);
         this.showUserData = this.showuser.asObservable();
-        this.url = "http://192.168.1.103:5000";
+        this.url = "http://192.168.0.100:5000";
     }
     present() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {

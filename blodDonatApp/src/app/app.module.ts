@@ -15,6 +15,7 @@ import {SmsPage} from './sms/sms.page';
 import{SharePageModule} from './share/share.module';
 import{SharePage} from './share/share.page'
 import {SocialSharing} from '@ionic-native/social-sharing/ngx'
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [SmsPage,SharePage],
