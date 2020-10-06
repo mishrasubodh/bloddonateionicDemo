@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit,Renderer2 } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { ModalController } from "@ionic/angular";
 import { SmsPage } from "../sms/sms.page";
@@ -15,7 +15,8 @@ export class DonerInfoPage implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private callNumber: CallNumber,
-    public modalController: ModalController
+    public modalController: ModalController,
+    private render: Renderer2
   ) {
    
     this.route.params.subscribe((params) => {
@@ -28,17 +29,17 @@ export class DonerInfoPage implements OnInit {
     
   }
   
-  showinfo(donerdata) {
-    console.log("click on user");
-  //   jQuery(function($) {
-  //   $( document ).ready(function() {
-  //     $('.collapse').on('show.bs.collapse', function () {
-  //       $('.collapse').not(this).collapse('hide');
-  //     });
-  //   });
-  // });
-  
+  showinfo(donerdata) { 
+   if(document.getElementById(`${donerdata}`).style.display == "block"){ 
+    document.getElementById(`${donerdata}`).style.display = "none";
+   }else if(document.getElementById(`${donerdata}`).style.display == "none"){
+   document.getElementsByClassName("active");
+    document.getElementById(`${donerdata}`).style.display = "block";
+   }
+    //document.getElementById(donerdata).style.display = 'none';
   }
+  
+  
   
   calldoner(d) {
     this.callNumber.callNumber(d.phoneNumber, true)

@@ -28,7 +28,8 @@ import {SocialSharing} from '@ionic-native/social-sharing/ngx'
     FormsModule,
     ReactiveFormsModule,
     SmsPageModule,
-    SharePageModule
+    SharePageModule,
+
   ],
   providers: [
     SocialSharing,

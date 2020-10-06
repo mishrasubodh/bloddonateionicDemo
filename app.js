@@ -14,17 +14,9 @@ const userGroup = require('./src/router/userGroupRoutes');
 const EmailData = require('./src/router/getEmailRoute');
 // Database connection;
 mongoose.connect(process.env.dbConnection , {useNewUrlParser: true});
-
 // Middlewares
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-
-// define a simple route
-// app.get('/', (req, res) => {
-//     res.json({"message": "Welcome to EasyNotes application. Take notes quickly. Organize and keep track of all your notes."});
-// });
-
-
 // All ROutes define 
 app.use('/', something);
 app.use('/blood_Group' ,cors(), bloodGroup);
